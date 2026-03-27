@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global app background and typography tweaks */
+body {
+	@apply bg-slate-950 text-slate-50 antialiased;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Gradient shell for the main app container */
+.app-shell {
+	@apply min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-slate-50;
+}
+
+/* Top navbar styling */
+.app-header {
+	@apply bg-slate-950/80 border-b border-slate-800 backdrop-blur shadow-lg;
+}
+
+.app-header-title {
+	@apply text-2xl font-bold tracking-tight bg-gradient-to-r from-sky-400 via-cyan-300 to-emerald-300 bg-clip-text text-transparent;
+}
+
+.app-nav-link {
+	@apply text-slate-300 hover:text-sky-300 transition-colors;
+}
+
+.app-nav-link-active {
+	@apply text-sky-300 font-semibold;
+}
+
+/* Card styles with subtle glow */
+.glass-card {
+	@apply rounded-2xl border border-slate-800/80 bg-slate-900/70 shadow-xl shadow-sky-950/40;
+}
+
+.glass-card-strong {
+	@apply rounded-2xl border border-sky-500/40 bg-slate-900/80 shadow-xl shadow-sky-900/60;
+}
+
+/* Member cards with subtle animation */
+.member-card {
+	@apply glass-card relative overflow-hidden transition-transform transition-shadow duration-200 ease-out hover:-translate-y-1 hover:shadow-2xl hover:shadow-sky-900/60;
+}
+
+.member-card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.35), transparent 55%);
+	transition: opacity 200ms ease-out;
+	pointer-events: none;
+}
+
+.member-card:hover::before {
+	opacity: 1;
+}
+
+/* Primary buttons */
+.btn-primary {
+	@apply inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-sky-500 to-cyan-400 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-sky-900/40 transition-transform transition-shadow hover:shadow-sky-800/70 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+.btn-outline {
+	@apply inline-flex items-center justify-center gap-2 rounded-lg border border-slate-700 bg-slate-900/60 px-3 py-1.5 text-sm font-medium text-slate-100 shadow-sm hover:border-sky-400 hover:text-sky-300 hover:shadow-sky-900/50;
+}
+
+/* Upload area */
+.upload-box {
+	@apply flex flex-col items-start gap-3 rounded-2xl border-2 border-dashed border-slate-700 bg-slate-900/70 px-6 py-5 hover:border-sky-400/80 hover:bg-slate-900/90 transition-colors;
+}
+
+.upload-hint {
+	@apply text-sm text-slate-400;
+}
+
+.upload-status {
+	@apply text-sm font-medium text-sky-300;
+}
+
+.upload-error {
+	@apply text-sm font-medium text-rose-300;
+}
+
+/* Result pills */
+.pill {
+	@apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-wide;
+}
+
+.pill-success {
+	@apply pill bg-emerald-500/15 text-emerald-300 border border-emerald-500/40;
+}
+
+.pill-danger {
+	@apply pill bg-rose-500/15 text-rose-300 border border-rose-500/40;
+}
+
+.pill-warning {
+	@apply pill bg-amber-500/15 text-amber-300 border border-amber-500/40;
+}
+
+.pill-neutral {
+	@apply pill bg-slate-700/60 text-slate-200 border border-slate-600;
+}
+
+/* Subtle grid background for the main content */
+.bg-grid {
+	background-image: linear-gradient(to right, rgba(148, 163, 184, 0.04) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(148, 163, 184, 0.04) 1px, transparent 1px);
+	background-size: 24px 24px;
+}
+
+/* Prose overrides for About page */
+.prose {
+	@apply text-slate-100 max-w-none;
+}
+
+.prose h1 {
+	@apply text-3xl font-bold mb-4 bg-gradient-to-r from-sky-400 to-cyan-300 bg-clip-text text-transparent;
+}
+
+.prose p {
+	@apply text-slate-300 leading-relaxed;
+}
+
+.prose strong {
+	@apply text-sky-300;
+}
+
+/* Frame grid tiles */
+.frame-tile {
+	@apply border border-slate-800 rounded-xl overflow-hidden bg-slate-900/80 shadow-md shadow-slate-950/60;
+}
+
+.frame-filename {
+	@apply p-2 text-[11px] text-slate-400 truncate bg-slate-950/60;
+}
+
+/* Footer */
+.app-footer {
+	@apply text-sm text-slate-500;
+}
+
+ 
