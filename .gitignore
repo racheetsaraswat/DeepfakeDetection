@@ -1,0 +1,68 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Ignore virtual environments
+env/
+venv/
+ENV/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore data and results (large files)
+backend/data/
+!backend/data/README.md
+
+# Ignore frontend build artifacts
+frontend/node_modules/
+frontend/dist/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore logs
+*.log
+
+# Ignore environment files
+.env
+.env.*
+
+# Ignore other large or generated files
+*.pt
+*.h5
+*.ckpt
+*.weights
+*.pkl
+*.db
+*.sqlite
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.7z
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.flv
+*.webm
+*.wav
+*.mp3
+*.ogg
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.tiff
+*.gif
+*.ico
